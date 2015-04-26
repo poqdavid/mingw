@@ -1,3 +1,3 @@
-  ignore (dir, variant);
-  let genidl = mingw_w64_tool_add name in
+  ignore dir;
+  let genidl = mingw_w64_add (name, variant) ~build:1 ~dependencies:[] in
 

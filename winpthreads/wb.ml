@@ -1,13 +1,6 @@
-  let winpthreads = add_full (name, variant)
-    ~dir
+  ignore dir;
+  let winpthreads = mingw_w64_add (name, variant)
     ~dependencies:[ binutils; gcc_core; mingw_w64_full ]
-    ~version:Version.mingw_w64
-    ~build:1
-    ~sources:[
-      Source.mingw_w64
-    ]
-    ~outputs:[
-      "${PACKAGE}-${VERSION}-${BUILD}-${HOST_TRIPLET}.txz";
-    ]
+    ~build:2
   in
 

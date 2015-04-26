@@ -1,26 +1,11 @@
-  let mingw_w64_add x ~build ~dependencies = add_full x
+  let mingw_w64_add = add_full
     ~dir
-    ~version:Version.mingw_w64
-    ~build
-    ~dependencies
+    ~version:"4.8.3"
     ~sources:[
-      Source.mingw_w64;
+      Tarball ("mingw-w64-${VERSION}.tar.bz2", "d31eac960d42e791970697eae5724e529c81dcd6")
     ]
     ~outputs:[
       "${PACKAGE}-${VERSION}-${BUILD}-${HOST_TRIPLET}.txz";
-    ]
-  in
-
-  let mingw_w64_tool_add name = add_full (name, None)
-    ~dir:"mingw"
-    ~dependencies:[]
-    ~version:Version.mingw_w64
-    ~build:1
-    ~outputs:[
-      "${PACKAGE}-${VERSION}-${BUILD}-${HOST_TRIPLET}.txz";
-    ]
-    ~sources:[
-      Source.mingw_w64;
     ]
   in
 

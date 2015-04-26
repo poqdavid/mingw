@@ -1,3 +1,3 @@
-  ignore (dir, variant);
-  let genpeimg = mingw_w64_tool_add name in
+  ignore dir;
+  let genpeimg = mingw_w64_add (name, variant) ~build:1 ~dependencies:[] in
 

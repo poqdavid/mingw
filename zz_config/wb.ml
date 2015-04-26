@@ -2,7 +2,7 @@
     ~dir
     ~dependencies:[]
     ~version:"1.0.0"
-    ~build:6
+    ~build:7
     ~sources:[
       WB "win-builds-switch.in";
     ]
