@@ -73,8 +73,7 @@ CXXFLAGS="-O2" \
   --infodir=/${PREFIX}/info \
   --mandir=/${PREFIX}/man \
   --build=${BUILD_TRIPLET} \
-  --host=${HOST_TRIPLET} \
-  --target=${TARGET_TRIPLET}
+  --host=${HOST_TRIPLET}
 
 make -j4 || exit 1
 make DESTDIR=$PKG install
