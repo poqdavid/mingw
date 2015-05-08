@@ -74,7 +74,7 @@ CXXFLAGS="-O2" \
   --mandir=/${PREFIX}/man \
   --build=${BUILD_TRIPLET} \
   --host=${HOST_TRIPLET} \
-  --target=${TARGET_TRIPLET}
+  --target=x86_64-w64-mingw32
 
 make -j4 || exit 1
 make DESTDIR=$PKG install
