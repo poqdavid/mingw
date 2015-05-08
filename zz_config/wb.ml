@@ -1,4 +1,4 @@
-  let zz_config = add_full (name, variant)
+  let zz_config = add (name, variant)
     ~dir
     ~dependencies:[]
     ~version:"1.0.0"

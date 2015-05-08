@@ -1,4 +1,4 @@
-  let mingw_w64_add = add_full
+  let mingw_w64_add = add
     ~dir
     ~version:"3.3.0"
     ~sources:[
