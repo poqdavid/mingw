@@ -76,7 +76,7 @@ CFLAGS="-O2" \
   || exit 1
 
 make $NUMJOBS || make || exit 1
-make install DESTDIR=$PKG || exit 1
+make -j1 install DESTDIR=$PKG || exit 1
 
 if [ ! -e "$PKG/${PREFIX}/mingw" ]; then
   (cd "${PKG}/${PREFIX}"; ln -s "${TARGET_TRIPLET}" "mingw")
